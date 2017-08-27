@@ -1,35 +1,5 @@
-// compileNested: C:\Users\LuizFelipe\Desktop\Estrutura MVC\assets\css\main.css
+// compileNested: C:\Users\LuizFelipe\Desktop\Estrutura MVC\assets\css\m
 
 /**
  * Lembre-se de completar o path completo acima!!
  */
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  height: 100%;
-  font-family: sans-serif;
-}
-
-body {
-  line-height: 1.5;
-  font-size: 16.5px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", Helvetica, Arial, sans-serif;
-  background-color: #fff;
-  color: #333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@import "scss/grid.scss";

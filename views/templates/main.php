@@ -10,8 +10,10 @@
     <title><?php echo NAME; ?></title>
   <?php endif; ?>
 
-  <!-- JavaScript que precisa ter escopo global -->
-  <script src="<?php echo BASE_URL; ?>/assets/js/jquery-3.2.1.min.js"></script>
+  <!-- JavaScripts que precisam ter escopo global -->
+  <script src="<?php echo BASE_URL; ?>/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="<?php echo BASE_URL; ?>/assets/vendor/bootstrap/popper.min.js"></script>
+  <script src="<?php echo BASE_URL; ?>/assets/vendor/bootstrap/bootstrap.min.js"></script>
 
   <link rel="shortcut icon" href="<?php echo BASE_URL; ?>/default.ico" />
 
@@ -22,6 +24,7 @@
   <?php endif; ?>
 
   <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/vendor/fontawesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/vendor/nprogress/nprogress.css" />
   <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/main.css" />
 </head>

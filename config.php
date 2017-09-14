@@ -15,7 +15,7 @@
   if (ENVIRONMENT === 'development') {
 
     define('BASE_URL', 'http://project');
-    define('NAME', 'Departamento Revolucionário Militar');
+    define('NAME', 'Um Nome');
 
     $dbconfig['host']     = 'localhost';
     $dbconfig['name']     = 'rhc';
@@ -24,7 +24,7 @@
   } else {
 
     define('BASE_URL', 'http://project');
-    define('NAME', 'Departamento Revolucionário Militar');
+    define('NAME', 'Um Nome');
 
     $dbconfig['host']     = 'localhost';
     $dbconfig['name']     = 'project';

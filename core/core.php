@@ -2,7 +2,7 @@
   class core
   {
 
-    public function run ()
+    public function init ()
     {
 
       # Definições iniciais:

@@ -1,5 +1,12 @@
-// compileNested: C:\Users\LuizFelipe\Desktop\Estrutura MVC\assets\css\m
+// compileCompressed: C:\wamp\www\gthod\assets\css\main.css
 
-/**
- * Lembre-se de completar o path completo acima!!
- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}

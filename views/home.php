@@ -1,2 +1,3 @@
-<div>Olá, mundo!</div>
-<div>Temos o número: <strong><?= $number ?></strong>.</div>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, veritatis voluptate voluptatum totam? Adipisci expedita reiciendis, vero saepe repellendus consectetur soluta rem ab nihil, debitis obcaecati nostrum mollitia. Tempore, tenetur?</div>
+<div>Accusamus perspiciatis perferendis alias fugit amet aperiam soluta necessitatibus autem blanditiis quos eveniet, placeat, provident sequi labore facilis. Modi, quaerat aliquid iure cumque. Voluptatum enim, error harum odit explicabo in!</div>
+<div>Officia doloribus, iste. Modi totam voluptatem delectus, illo molestias, vel quidem ut beatae repellendus laudantium eum, rerum quo, odio nesciunt harum quaerat voluptas. Nemo amet consequatur laboriosam, nisi quasi ipsum.</div>

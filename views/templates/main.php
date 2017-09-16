@@ -25,36 +25,25 @@
 
   <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/vendor/fontawesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/vendor/bootstrap/bootstrap.min.css" />
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/vendor/nprogress/nprogress.css" />
   <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/main.css" />
 </head>
 <body>
   <header class="page-header">
-    <nav class="main-nav wrap-padding">
-      Menu de Navegação
-    </nav>
+    <?php require 'mainmenu.php'; ?>
   </header>
 
-  <main class="page-content wrap">
+  <main class="page-content">
     <section class="content">
       <?php $this->loadViewInTemplate ($name, $data); ?>
     </section>
   </main>
 
-  <footer class="page-footer wrap-padding">
-    Conteúdo do footer.
+  <footer class="page-footer">
+    <?php require 'footer.php'; ?>
   </footer>
 
   <!-- JavaScripts -->
-  <script src="<?php echo BASE_URL; ?>/assets/vendor/nprogress/nprogress.js"></script>
-  <script>
-    NProgress.start();
-    $(window).on('load', function () {
-      NProgress.done();
-    });
-  </script>
   <script src="<?php echo BASE_URL; ?>/assets/js/main.js"></script>
-
   <?php if (isset($scripts)): ?>
     <?php foreach ($scripts as $script): ?>
       <script src="<?php echo BASE_URL . $script; ?>"></script>

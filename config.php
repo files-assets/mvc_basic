@@ -1,30 +1,34 @@
 <?php
+
+  /**
+   * Definições Iniciais:
+   */
   date_default_timezone_set('America/Sao_Paulo');
   header('charset=utf8');
 
   require 'environment.php';
+
+  define('NAME', 'Um Nome');
 
   /**
    * Conexão com banco de dados:
    */
   $dbconfig = array();
   $options = array(
-    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
   );
 
   if (ENVIRONMENT === 'development') {
 
     define('BASE_URL', 'http://project');
-    define('NAME', 'Um Nome');
 
     $dbconfig['host']     = 'localhost';
-    $dbconfig['name']     = 'rhc';
+    $dbconfig['name']     = 'project';
     $dbconfig['user']     = 'root';
     $dbconfig['password'] = '';
   } else {
 
     define('BASE_URL', 'http://project');
-    define('NAME', 'Um Nome');
 
     $dbconfig['host']     = 'localhost';
     $dbconfig['name']     = 'project';
@@ -35,7 +39,7 @@
   global $pdo;
   try {
 
-    $pdo = new PDO (
+    $pdo = new PDO(
       'mysql:host='. $dbconfig['host'] .';dbname='. $dbconfig['name'],
       $dbconfig['user'],
       $dbconfig['password'],
@@ -45,6 +49,7 @@
   } catch (PDOException $error) {
     echo 'Houve um erro durante a conexão com o banco de dados: <br />';
     echo $error->getMessage();
+    exit;
   }
 
 

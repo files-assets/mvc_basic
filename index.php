@@ -14,6 +14,6 @@
     }
   });
 
-  $core = new core ();
+  $core = new core();
   $core->init();
 ?>

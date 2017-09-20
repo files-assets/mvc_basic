@@ -1,5 +1,5 @@
 <?php
-  class controller
+  class controller extends core
   {
     public function loadView ($name, $data = array(), $loadBase = true)
     {

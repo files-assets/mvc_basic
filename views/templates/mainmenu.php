@@ -1,3 +1,6 @@
 <nav class="site-mainmenu">
-  <a href="#">Links do menu.</a>
+  <a href="">Início</a>
+  <a href="">Contato</a>
+  <a href="">Sobre</a>
+  <a href="">Footer</a>
 </nav>

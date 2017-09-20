@@ -10,35 +10,37 @@
     <title><?php echo NAME; ?></title>
   <?php endif; ?>
 
-  <!-- JavaScripts que precisam ter escopo global -->
   <script src="<?php echo BASE_URL; ?>/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
   <script src="<?php echo BASE_URL; ?>/assets/vendor/bootstrap/popper.min.js"></script>
   <script src="<?php echo BASE_URL; ?>/assets/vendor/bootstrap/bootstrap.min.js"></script>
 
   <link rel="shortcut icon" href="<?php echo BASE_URL; ?>/default.ico" />
 
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/vendor/fontawesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/main.min.css" />
+
   <?php if (isset($styles)): ?>
     <?php foreach ($styles as $style): ?>
       <link rel="stylesheet" href="<?php echo BASE_URL . $style; ?>" />
     <?php endforeach; ?>
   <?php endif; ?>
-
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/vendor/fontawesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/vendor/bootstrap/bootstrap.min.css" />
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/main.css" />
 </head>
 <body>
-  <header class="page-header">
-    <?php require 'mainmenu.php'; ?>
+  <header class="page-header-content">
+    <div class="header">
+      <h1 class="main-title"><?php echo NAME; ?></h1>
+      <?php require 'mainmenu.php'; ?>
+    </div>
   </header>
 
-  <main class="page-content">
+  <main class="page-content-content">
     <section class="content">
       <?php $this->loadViewInTemplate ($name, $data); ?>
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer-content">
     <?php require 'footer.php'; ?>
   </footer>
 

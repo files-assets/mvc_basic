@@ -1,5 +1,5 @@
 <?php
-  class model
+  class model extends core
   {
 
     protected $pdo;

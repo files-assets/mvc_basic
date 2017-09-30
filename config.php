@@ -20,7 +20,7 @@
 
   if (ENVIRONMENT === 'development') {
 
-    define('BASE_URL', 'http://project');
+    define('BASE_URL', 'http://localhost/mvc');
 
     $dbconfig['host']     = 'localhost';
     $dbconfig['name']     = 'project';
@@ -28,7 +28,7 @@
     $dbconfig['password'] = '';
   } else {
 
-    define('BASE_URL', 'http://project');
+    define('BASE_URL', 'http://localhost/mvc');
 
     $dbconfig['host']     = 'localhost';
     $dbconfig['name']     = 'project';
@@ -54,27 +54,11 @@
 
 
   /**
-   * Funções de location, param_get e param_post:
+   * Função de localização:
    */
   function location ($location) {
     $location = BASE_URL . $location;
     echo '<meta http-equiv="refresh" content="0; url='. $location .'" />';
     echo '<meta http-equiv="refresh" content="1; url='. $location .'" />';
-  }
-
-  function param_get($name, $type = 'string') {
-    if (!isset($_GET, $_GET[$name]) || gettype($_GET[$name]) !== $type || empty($_GET[$name])) {
-      return false;
-    }
-
-    return $_GET[$name];
-  }
-
-  function param_post($name, $type = 'string') {
-    if (!isset($_POST, $_POST[$name]) || gettype($_POST[$name]) !== $type || empty($_POST[$name])) {
-      return false;
-    }
-
-    return $_POST[$name];
   }
 ?>

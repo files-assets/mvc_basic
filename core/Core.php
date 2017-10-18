@@ -30,12 +30,12 @@
         }
 
       } else {
-        $currentController = 'indexController';
+        $currentController = 'IndexController';
         $currentAction = 'index';
       }
 
       if (!file_exists('controllers/'. $currentController .'.php') || !method_exists($currentController, $currentAction)) {
-        $currentController = 'error404Controller';
+        $currentController = 'Error404Controller';
         $currentAction = 'index';
       }
 

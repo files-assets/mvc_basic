@@ -44,7 +44,7 @@
     $location = BASE_URL . $location;
     echo '<meta http-equiv="refresh" content="0; url='. $location .'" />';
     echo '<meta http-equiv="refresh" content="1; url='. $location .'" />';
-    echo '<script> location.replace("'. $location .'"); </script>';
-    echo '<script> setInterval(function () { location.replace("'. $location .'"); }, 10) </script>';
+    //echo '<script> location.replace("'. $location .'"); </script>';
+    //echo '<script> setInterval(function () { location.replace("'. $location .'"); }, 10) </script>';
   }
 ?>

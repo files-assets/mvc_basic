@@ -1,5 +1,5 @@
 <?php
-  class Controller extends Core
+  class Controller
   {
     public function render ($name, $data = array(), $loadBase = true)
     {

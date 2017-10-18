@@ -1,7 +1,7 @@
 <?php
   class Controller extends Core
   {
-    public function loadView ($name, $data = array(), $loadBase = true)
+    public function render ($name, $data = array(), $loadBase = true)
     {
       extract($data);
 
@@ -12,7 +12,7 @@
       }
     }
 
-    public function loadViewInTemplate ($name, $data = array())
+    public function renderInTemplate ($name, $data = array())
     {
       extract($data);
       require 'views/'. $name .'.php';

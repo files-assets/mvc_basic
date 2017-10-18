@@ -4,37 +4,22 @@
    * Definições Iniciais:
    */
   date_default_timezone_set('America/Sao_Paulo');
-  header('charset=utf8');
-
-  require 'environment.php';
 
   define('NAME', 'Um Nome');
+  define('BASE_URL', 'http://localhost/mvc');
 
   /**
-   * Conexão com banco de dados:
+   * Conexão com a base de dados:
    */
-  $dbconfig = array();
-  $options = array(
-    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
+  $dbconfig = array(
+    'host'     => 'localhost', // Host (IP);
+    'name'     => 'project',   // Nome do banco;
+    'user'     => 'root',      // Nome do usuário;
+    'password' => '',          // Senha do usuário;
+    'options'  => array(
+      PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
+    )
   );
-
-  if (ENVIRONMENT === 'development') {
-
-    define('BASE_URL', 'http://localhost/mvc');
-
-    $dbconfig['host']     = 'localhost';
-    $dbconfig['name']     = 'project';
-    $dbconfig['user']     = 'root';
-    $dbconfig['password'] = '';
-  } else {
-
-    define('BASE_URL', 'http://localhost/mvc');
-
-    $dbconfig['host']     = 'localhost';
-    $dbconfig['name']     = 'project';
-    $dbconfig['user']     = 'root';
-    $dbconfig['password'] = '';
-  }
 
   global $pdo;
   try {
@@ -43,7 +28,7 @@
       'mysql:host='. $dbconfig['host'] .';dbname='. $dbconfig['name'],
       $dbconfig['user'],
       $dbconfig['password'],
-      $options
+      $dbconfig['options']
     );
 
   } catch (PDOException $error) {
@@ -52,13 +37,14 @@
     exit;
   }
 
-
   /**
-   * Função de localização:
+   * @param string $location - Corresponde à URL.
    */
   function location ($location) {
     $location = BASE_URL . $location;
     echo '<meta http-equiv="refresh" content="0; url='. $location .'" />';
     echo '<meta http-equiv="refresh" content="1; url='. $location .'" />';
+    echo '<script> location.replace("'. $location .'"); </script>';
+    echo '<script> setInterval(function () { location.replace("'. $location .'"); }, 10) </script>';
   }
 ?>

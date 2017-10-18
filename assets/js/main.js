@@ -2,6 +2,6 @@
   'use strict';
 
   $(function () {
-    $('[data-role="tooltip"]').tooltip();
+    console.log('Ok!');
   });
 }(jQuery));
